@@ -1,0 +1,748 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+		C4C500A385299813324266AC = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
+		253BD628C6A69697413B91CE = { isa = PBXBuildFile; fileRef = C4C500A385299813324266AC; };
+		67F40F2AE7BFE8E10B83964B = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		5CB095F7FEB6C272763C8641 = { isa = PBXBuildFile; fileRef = 67F40F2AE7BFE8E10B83964B; };
+		A904977652F1165C229D459D = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolRouter.swift; sourceTree = "<group>"; };
+		28C84D4AD4EA743F6D0D7AD5 = { isa = PBXBuildFile; fileRef = A904977652F1165C229D459D; };
+		B38D38913E7AE975B16F242B = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceInput.swift; sourceTree = "<group>"; };
+		0D151D391CCC8E2022DAC605 = { isa = PBXBuildFile; fileRef = B38D38913E7AE975B16F242B; };
+		A0BEE5050555630C5F9C5B12 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NajeebAPIClient.swift; sourceTree = "<group>"; };
+		C8BF0281AE43EAB6AB5C3447 = { isa = PBXBuildFile; fileRef = A0BEE5050555630C5F9C5B12; };
+		5E9F7D1DD83636E82687F287 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendModels.swift; sourceTree = "<group>"; };
+		172BD0DACE750C8DE88E2E4A = { isa = PBXBuildFile; fileRef = 5E9F7D1DD83636E82687F287; };
+		099409742FEE941FEB0EB920 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingQuestionFilter.swift; sourceTree = "<group>"; };
+		BB6851CF9494D2D6419034B5 = { isa = PBXBuildFile; fileRef = 099409742FEE941FEB0EB920; };
+		0C2FA84C3F8B8BC418216D5F = { isa = PBXFileReference; lastKnownFileType = folder; path = AgentConfiguration; sourceTree = "<group>"; };
+		57463787FD746088B806627D = {
+			isa = PBXGroup;
+			children = (
+				E96BC4D0983565ABD34CE020,
+				C4C500A385299813324266AC,
+				67F40F2AE7BFE8E10B83964B,
+				A904977652F1165C229D459D,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		AFA5B06B2477EF44A19CA5F0 = {
+			isa = PBXGroup;
+			children = (
+				A0BEE5050555630C5F9C5B12,
+				5E9F7D1DD83636E82687F287,
+				099409742FEE941FEB0EB920,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3E55C64DEACBFACB0F41632F = {
+			isa = PBXGroup;
+			children = (
+				D01400000000000000000001,
+				D01600000000000000000001,
+				9766A3AD56C65AB1FD7DAF8B,
+				D01500000000000000000001,
+				B38D38913E7AE975B16F242B,
+				0C2FA84C3F8B8BC418216D5F,
+			);
+			path = Voice;
+			sourceTree = "<group>";
+		};
+		7C14825BEB495316CAF2A25B = {
+			isa = PBXGroup;
+			children = (
+				81E8AF608B06BDA2C43323B5,
+				B77E843EEDAB404B033E06CC,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		6C923F6D92369A43B16924F4 = {
+			isa = PBXGroup;
+			children = (
+				D01100000000000000000001,
+				D01200000000000000000001,
+				D01200000000000000000002,
+				D01200000000000000000003,
+				D01200000000000000000004,
+				81B9E187ABEE2BC7A1B66A10,
+				7AA0F6FFDA320E3A8D28E192,
+				FFC2CD051CC1342F2112DD68,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F7941CFED50A91766143B1D8 = {
+			isa = PBXGroup;
+			children = (
+				5045B48288DCFEF37E310680,
+				B07A620132F87082D1AC6CB7,
+				1C415192907431551EC4E3DD,
+			);
+			path = CarPlay;
+			sourceTree = "<group>";
+		};
+		D01500000000000000000001 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSounds.swift; sourceTree = "<group>"; };
+		D01500000000000000000002 = { isa = PBXBuildFile; fileRef = D01500000000000000000001; };
+		D01600000000000000000001 = { isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		D01600000000000000000002 = { isa = PBXBuildFile; fileRef = D01600000000000000000001; };
+		D01400000000000000000001 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceAudioSession.swift; sourceTree = "<group>"; };
+		D01400000000000000000002 = { isa = PBXBuildFile; fileRef = D01400000000000000000001; };
+		D01100000000000000000001 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NajeebTheme.swift; sourceTree = "<group>"; };
+		D01100000000000000000002 = { isa = PBXBuildFile; fileRef = D01100000000000000000001; };
+		D01200000000000000000001 = { isa = PBXFileReference; lastKnownFileType = file; path = "Fonts/ThmanyahSans-Regular.ttf"; sourceTree = "<group>"; };
+		D01300000000000000000001 = { isa = PBXBuildFile; fileRef = D01200000000000000000001; };
+		D01200000000000000000002 = { isa = PBXFileReference; lastKnownFileType = file; path = "Fonts/ThmanyahSans-Medium.ttf"; sourceTree = "<group>"; };
+		D01300000000000000000002 = { isa = PBXBuildFile; fileRef = D01200000000000000000002; };
+		D01200000000000000000003 = { isa = PBXFileReference; lastKnownFileType = file; path = "Fonts/ThmanyahSans-Bold.ttf"; sourceTree = "<group>"; };
+		D01300000000000000000003 = { isa = PBXBuildFile; fileRef = D01200000000000000000003; };
+		D01200000000000000000004 = { isa = PBXFileReference; lastKnownFileType = file; path = "Fonts/ThmanyahSans-Black.ttf"; sourceTree = "<group>"; };
+		D01300000000000000000004 = { isa = PBXBuildFile; fileRef = D01200000000000000000004; };
+
+		81E8AF608B06BDA2C43323B5 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = AppSettings.swift;
+			sourceTree = "<group>";
+		};
+		63472B2363B5B1038FAD2E51 = {
+			isa = PBXBuildFile;
+			fileRef = 81E8AF608B06BDA2C43323B5;
+		};
+		5045B48288DCFEF37E310680 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = CarPlaySceneDelegate.swift;
+			sourceTree = "<group>";
+		};
+		D82F089B86176BCD3FF9F8E8 = {
+			isa = PBXBuildFile;
+			fileRef = 5045B48288DCFEF37E310680;
+		};
+		FFC2CD051CC1342F2112DD68 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = DiagnosticsView.swift;
+			sourceTree = "<group>";
+		};
+		21B3A46E86EBDD7F830352CB = {
+			isa = PBXBuildFile;
+			fileRef = FFC2CD051CC1342F2112DD68;
+		};
+		E96BC4D0983565ABD34CE020 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = GameSession.swift;
+			sourceTree = "<group>";
+		};
+		167B30FA2F1D08CE9B832CB0 = {
+			isa = PBXBuildFile;
+			fileRef = E96BC4D0983565ABD34CE020;
+		};
+		81B9E187ABEE2BC7A1B66A10 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = HomeView.swift;
+			sourceTree = "<group>";
+		};
+		2A32DDC40B9E4FCCBAF73B9E = {
+			isa = PBXBuildFile;
+			fileRef = 81B9E187ABEE2BC7A1B66A10;
+		};
+		2A041B546A244EF72E9C6473 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = NajeebApp.swift;
+			sourceTree = "<group>";
+		};
+		F9F98017293CF524A1D70F41 = {
+			isa = PBXBuildFile;
+			fileRef = 2A041B546A244EF72E9C6473;
+		};
+		B77E843EEDAB404B033E06CC = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = SessionArchive.swift;
+			sourceTree = "<group>";
+		};
+		73F7B778F9A5FBA486E41303 = {
+			isa = PBXBuildFile;
+			fileRef = B77E843EEDAB404B033E06CC;
+		};
+		7AA0F6FFDA320E3A8D28E192 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = SettingsView.swift;
+			sourceTree = "<group>";
+		};
+		F4B0303B44F9A0A5C9BCC0A0 = {
+			isa = PBXBuildFile;
+			fileRef = 7AA0F6FFDA320E3A8D28E192;
+		};
+		9766A3AD56C65AB1FD7DAF8B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = VoiceStatus.swift;
+			sourceTree = "<group>";
+		};
+		A19532965C3C393B74B85FAA = {
+			isa = PBXBuildFile;
+			fileRef = 9766A3AD56C65AB1FD7DAF8B;
+		};
+		1A0BB28D9936E96B0AC1C59A = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = Info.plist;
+			sourceTree = "<group>";
+		};
+		B07A620132F87082D1AC6CB7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = "Info-CarPlay.plist";
+			sourceTree = "<group>";
+		};
+		1C415192907431551EC4E3DD = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.entitlements;
+			path = "Najeeb-CarPlay.entitlements";
+			sourceTree = "<group>";
+		};
+		A6A3256D7E0B45B34E0E0E18 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = Najeeb.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EE56A826A4B783BB7C2446CF = {
+			isa = PBXGroup;
+			children = (
+				A6A3256D7E0B45B34E0E0E18,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00A9D3ECE4A0D27342449984 = {
+			isa = PBXGroup;
+			children = (
+				2A041B546A244EF72E9C6473,
+				57463787FD746088B806627D,
+				AFA5B06B2477EF44A19CA5F0,
+				3E55C64DEACBFACB0F41632F,
+				7C14825BEB495316CAF2A25B,
+				6C923F6D92369A43B16924F4,
+				F7941CFED50A91766143B1D8,
+				1A0BB28D9936E96B0AC1C59A,
+			);
+			path = Najeeb;
+			sourceTree = "<group>";
+		};
+		6F0B2C3F0E34714DF90F09E5 = {
+			isa = PBXGroup;
+			children = (
+				00A9D3ECE4A0D27342449984,
+				EE56A826A4B783BB7C2446CF,
+			);
+			sourceTree = "<group>";
+		};
+		3975A835F2B6268FC8DB0F29 = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elevenlabs/elevenlabs-swift-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.4.0;
+			};
+		};
+		20F70A75326D54DDD315BE43 = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/livekit/client-sdk-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.17.0;
+			};
+		};
+		8A2BCBA4220B669392D1C2F0 = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3975A835F2B6268FC8DB0F29;
+			productName = ElevenLabs;
+		};
+		22376A0A204C0C6A96D5F39A = {
+			isa = PBXBuildFile;
+			productRef = 8A2BCBA4220B669392D1C2F0;
+		};
+		6EEBA3B2CCBAA661D5315132 = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20F70A75326D54DDD315BE43;
+			productName = LiveKit;
+		};
+		32906D4FC8881EE0334608AA = {
+			isa = PBXBuildFile;
+			productRef = 6EEBA3B2CCBAA661D5315132;
+		};
+		A90E3027A6241635421F54A6 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253BD628C6A69697413B91CE,
+				5CB095F7FEB6C272763C8641,
+				28C84D4AD4EA743F6D0D7AD5,
+				0D151D391CCC8E2022DAC605,
+				C8BF0281AE43EAB6AB5C3447,
+				172BD0DACE750C8DE88E2E4A,
+				BB6851CF9494D2D6419034B5,
+				63472B2363B5B1038FAD2E51,
+				D82F089B86176BCD3FF9F8E8,
+				21B3A46E86EBDD7F830352CB,
+				167B30FA2F1D08CE9B832CB0,
+				D01400000000000000000002,
+				D01500000000000000000002,
+				2A32DDC40B9E4FCCBAF73B9E,
+				D01100000000000000000002,
+				F9F98017293CF524A1D70F41,
+				73F7B778F9A5FBA486E41303,
+				F4B0303B44F9A0A5C9BCC0A0,
+				A19532965C3C393B74B85FAA,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		242BF81E3F5ADE40F2421465 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22376A0A204C0C6A96D5F39A,
+				32906D4FC8881EE0334608AA,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		001C5B6305ED90DA2035F65A = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (D01600000000000000000002, D01300000000000000000001, D01300000000000000000002, D01300000000000000000003, D01300000000000000000004);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA9632AB2E2484509A380813 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ONLY_ACTIVE_ARCH = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_COMPILATION_MODE = singlefile;
+			};
+			name = Debug;
+		};
+		6F30800668507B0F2F84437F = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Najeeb/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.najeeb.voiceprototype;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3DEC9AD9342646DC6B0D5379 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0451B885D01B35A56E864C8A = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Najeeb/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.najeeb.voiceprototype;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F1EA553363822E46D7AB5AA3 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ONLY_ACTIVE_ARCH = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_COMPILATION_MODE = singlefile;
+			};
+			name = CarPlayDebug;
+		};
+		E9866B933E3B6AD156F2EE52 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Najeeb/CarPlay/Info-CarPlay.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.najeeb.voiceprototype;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				CODE_SIGN_ENTITLEMENTS = "Najeeb/CarPlay/Najeeb-CarPlay.entitlements";
+			};
+			name = CarPlayDebug;
+		};
+		9BA08C7FA6034A8D116AA2DB = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = CarPlayRelease;
+		};
+		EA29030089EF38AA815AF7D7 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Najeeb/CarPlay/Info-CarPlay.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.najeeb.voiceprototype;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				CODE_SIGN_ENTITLEMENTS = "Najeeb/CarPlay/Najeeb-CarPlay.entitlements";
+			};
+			name = CarPlayRelease;
+		};
+		128E90BC43D207B698EFC0EA = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA9632AB2E2484509A380813,
+				3DEC9AD9342646DC6B0D5379,
+				F1EA553363822E46D7AB5AA3,
+				9BA08C7FA6034A8D116AA2DB,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EED7333C493A5089DAC8B93 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F30800668507B0F2F84437F,
+				0451B885D01B35A56E864C8A,
+				E9866B933E3B6AD156F2EE52,
+				EA29030089EF38AA815AF7D7,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D4A7907F3513B6ACA64D8F5 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EED7333C493A5089DAC8B93;
+			buildPhases = (
+				A90E3027A6241635421F54A6,
+				242BF81E3F5ADE40F2421465,
+				001C5B6305ED90DA2035F65A,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = Najeeb;
+			packageProductDependencies = (
+				8A2BCBA4220B669392D1C2F0,
+				6EEBA3B2CCBAA661D5315132,
+			);
+			productName = Najeeb;
+			productReference = A6A3256D7E0B45B34E0E0E18;
+			productType = "com.apple.product-type.application";
+		};
+		26936E28006AA09B04E1D326 = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					9D4A7907F3513B6ACA64D8F5 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+				};
+			};
+			buildConfigurationList = 128E90BC43D207B698EFC0EA;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = ar;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				ar,
+				en,
+				Base,
+			);
+			mainGroup = 6F0B2C3F0E34714DF90F09E5;
+			packageReferences = (
+				3975A835F2B6268FC8DB0F29,
+				20F70A75326D54DDD315BE43,
+			);
+			productRefGroup = EE56A826A4B783BB7C2446CF;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D4A7907F3513B6ACA64D8F5,
+			);
+		};
+	};
+	rootObject = 26936E28006AA09B04E1D326;
+}

@@ -1,0 +1,20 @@
+# Xcode / SwiftPM output and local editor state
+.DS_Store
+.build/
+.swiftpm/
+DerivedData/
+build/
+**/xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# Credentials and local configuration
+.env
+.env.*
+*.pem
+*.p12
+*.key
+
+# Local runtime evidence / historical development logs
+docs/evidence/
+docs/local-history/
