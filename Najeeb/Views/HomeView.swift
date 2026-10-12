@@ -14,13 +14,13 @@ struct HomeView: View {
                 if geometry.size.width > geometry.size.height { landscapeLayout(size: geometry.size) }
                 else { portraitLayout }
             }
-            .background { NajeebBackground() }
+            .background(NajeebTheme.background)
             .navigationTitle("نجيب")
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(NajeebTheme.background, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .principal) {
-                    Text("نجيب").font(NajeebTheme.font(22, weight: "Black", relativeTo: .title2)).foregroundStyle(NajeebTheme.teal)
+                    Text("نجيب").font(NajeebTheme.font(22, weight: "Black", relativeTo: .title2))
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Menu {
@@ -73,13 +73,12 @@ struct HomeView: View {
         HStack(spacing: 16) {
             ForEach(session.state.teams) { team in
                 let current = session.state.currentTeamID == team.id
-                let accent = NajeebTheme.teamColor(team.id)
                 Group {
                     if compact {
                         HStack {
                             Text(team.name).font(NajeebTheme.font(16, weight: "Bold"))
                             Spacer()
-                            if current { Circle().fill(accent).frame(width: 7, height: 7).accessibilityLabel("عليكم الدور") }
+                            if current { Circle().fill(.black).frame(width: 7, height: 7).accessibilityLabel("عليكم الدور") }
                             Text(team.score, format: .number).font(NajeebTheme.font(24, weight: "Black", relativeTo: .title2))
                         }.padding(.horizontal, 16)
                     } else {
@@ -93,11 +92,8 @@ struct HomeView: View {
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, compact ? 10 : 16)
-                .background(accent.opacity(current ? 0.16 : 0.07), in: RoundedRectangle(cornerRadius: 16))
-                .overlay(RoundedRectangle(cornerRadius: 16).stroke(accent.opacity(current ? 0.65 : 0.25), lineWidth: current ? 2 : 1))
-                .overlay(alignment: .top) {
-                    Capsule().fill(accent).frame(width: 36, height: 4).padding(.top, 8)
-                }
+                .background(current ? Color.white : NajeebTheme.surface, in: RoundedRectangle(cornerRadius: 16))
+                .overlay(RoundedRectangle(cornerRadius: 16).stroke(current ? Color.black : NajeebTheme.border, lineWidth: 1))
             }
         }
     }
@@ -105,24 +101,24 @@ struct HomeView: View {
     @ViewBuilder private var gameContent: some View {
         if let winner = session.state.winner {
             VStack(spacing: 12) {
-                Image(systemName: "trophy.fill").font(.system(size: 48)).foregroundStyle(NajeebTheme.orange)
+                Image(systemName: "trophy.fill").font(.system(size: 48))
                 Text(winner.isTie ? "تعادل!" : "الفوز لـ\(winner.teamName ?? "")")
                     .font(NajeebTheme.font(30, weight: "Black", relativeTo: .title))
                 Text("خلصت المسابقة، يعطيكم العافية!").foregroundStyle(NajeebTheme.muted)
             }.frame(maxWidth: .infinity).padding(.vertical, 32)
-                .background(NajeebTheme.pink.opacity(0.06), in: RoundedRectangle(cornerRadius: 20))
+                .background(NajeebTheme.surface, in: RoundedRectangle(cornerRadius: 20))
         } else if ended {
             Text("انتهت المسابقة").font(NajeebTheme.font(28, weight: "Black", relativeTo: .title))
                 .frame(maxWidth: .infinity).padding(.vertical, 40)
         } else if let question = session.state.currentQuestion {
             VStack(alignment: .leading, spacing: 20) {
                 HStack {
-                    Text(question.categoryName).foregroundStyle(NajeebTheme.pink)
+                    Text(question.categoryName).foregroundStyle(NajeebTheme.muted)
                     Spacer()
                     Text("\(question.difficulty.arabicName) · \(question.points)")
-                        .foregroundStyle(NajeebTheme.difficultyColor(question.difficulty))
+                        .foregroundStyle(NajeebTheme.muted)
                         .padding(.horizontal, 10).padding(.vertical, 6)
-                        .background(NajeebTheme.difficultyColor(question.difficulty).opacity(0.10), in: Capsule())
+                        .background(NajeebTheme.surface, in: Capsule())
                 }.font(NajeebTheme.font(14, weight: "Medium"))
                 Text(question.text).font(NajeebTheme.font(26, weight: "Bold", relativeTo: .title2))
                     .fixedSize(horizontal: false, vertical: true)
@@ -130,28 +126,28 @@ struct HomeView: View {
                     ForEach(Array(choices.enumerated()), id: \.offset) { index, text in
                         Text("\(index + 1). \(text)").font(NajeebTheme.font(18, weight: "Medium"))
                             .frame(maxWidth: .infinity, alignment: .leading).padding(12)
-                            .background(NajeebTheme.orange.opacity(0.08), in: RoundedRectangle(cornerRadius: 12))
+                            .background(NajeebTheme.surface, in: RoundedRectangle(cornerRadius: 12))
                     }
                 }
                 if let hint = question.hint {
-                    Label(hint, systemImage: "lightbulb").foregroundStyle(NajeebTheme.teal)
+                    Label(hint, systemImage: "lightbulb").foregroundStyle(NajeebTheme.muted)
                         .padding(12).frame(maxWidth: .infinity, alignment: .leading)
-                        .background(NajeebTheme.mint.opacity(0.08), in: RoundedRectangle(cornerRadius: 12))
+                        .background(NajeebTheme.surface, in: RoundedRectangle(cornerRadius: 12))
                 }
                 Divider()
-                Text("يا نجيب… أو: إجابتنا هي…").font(NajeebTheme.font(16, weight: "Bold")).foregroundStyle(NajeebTheme.teal)
+                Text("يا نجيب… أو: إجابتنا هي…").font(NajeebTheme.font(16, weight: "Bold"))
                 Text("السؤال \(session.state.completedQuestions + 1) من 18").font(NajeebTheme.font(12)).foregroundStyle(NajeebTheme.muted)
             }
             .padding(24)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(.white, in: RoundedRectangle(cornerRadius: 18))
-            .overlay(RoundedRectangle(cornerRadius: 18).stroke(NajeebTheme.pink.opacity(0.14), lineWidth: 1))
+            .overlay(RoundedRectangle(cornerRadius: 18).stroke(NajeebTheme.border, lineWidth: 1))
         } else {
             VStack(spacing: 20) {
                 Image(systemName: "waveform").font(.system(size: 48, weight: .light))
-                    .foregroundStyle(NajeebTheme.teal).frame(width: 112, height: 112)
-                    .background(NajeebTheme.mint.opacity(0.10), in: Circle())
-                    .overlay(Circle().stroke(NajeebTheme.mint.opacity(0.16), lineWidth: 1))
+                    .foregroundStyle(.black).frame(width: 112, height: 112)
+                    .background(NajeebTheme.surface, in: Circle())
+                    .overlay(Circle().stroke(NajeebTheme.border, lineWidth: 1))
                     .padding(.top, 24)
                 Text(session.state.selectedCategories.isEmpty ? "المسابقة تبدأ بسوالفكم" : "نجهّز المسابقة")
                     .font(NajeebTheme.font(28, weight: "Black", relativeTo: .title))
@@ -159,11 +155,10 @@ struct HomeView: View {
                     .multilineTextAlignment(.center).foregroundStyle(NajeebTheme.muted)
                 if !session.state.selectedCategories.isEmpty {
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 8) {
-                        ForEach(Array(session.state.selectedCategories.enumerated()), id: \.element.id) { index, category in
-                            let color = [NajeebTheme.teal, NajeebTheme.pink, NajeebTheme.orange][index % 3]
+                        ForEach(session.state.selectedCategories) { category in
                             Text(category.name).font(NajeebTheme.font(14, weight: "Medium"))
                                 .foregroundStyle(.black).padding(.horizontal, 10).padding(.vertical, 8)
-                                .frame(maxWidth: .infinity).background(color.opacity(0.10), in: RoundedRectangle(cornerRadius: 10))
+                                .frame(maxWidth: .infinity).background(NajeebTheme.surface, in: RoundedRectangle(cornerRadius: 10))
                         }
                     }
                 }
@@ -175,11 +170,11 @@ struct HomeView: View {
         VStack(spacing: 16) {
             if !ended {
                 HStack(spacing: 8) {
-                    Circle().fill(NajeebTheme.voiceColor(session.voiceStatus)).frame(width: 7, height: 7)
+                    Circle().fill(session.voiceStatus == .disconnected ? Color.red : Color.black).frame(width: 7, height: 7)
                     Text(session.state.phase == .paused ? "المسابقة متوقفة مؤقتًا" : session.voiceStatus.label)
                         .font(NajeebTheme.font(14, weight: "Medium"))
                 }.padding(.horizontal, 12).padding(.vertical, 8)
-                    .background(NajeebTheme.voiceColor(session.voiceStatus).opacity(0.08), in: Capsule())
+                    .background(NajeebTheme.surface, in: Capsule())
                     .accessibilityElement(children: .combine)
                 if let team = session.state.teams.first(where: { $0.id == session.state.currentTeamID }) {
                     HStack(spacing: 8) {
@@ -187,7 +182,7 @@ struct HomeView: View {
                             Text(helper.name)
                                 .frame(maxWidth: .infinity).padding(.vertical, 8)
                                 .foregroundStyle(.black)
-                                .background(NajeebTheme.helperColor(helper.id).opacity(0.12), in: RoundedRectangle(cornerRadius: 10))
+                                .background(NajeebTheme.surface, in: RoundedRectangle(cornerRadius: 10))
                                 .strikethrough(team.usedHelperIDs.contains(helper.id))
                                 .opacity(team.usedHelperIDs.contains(helper.id) ? 0.3 : 1)
                         }
@@ -205,8 +200,8 @@ struct HomeView: View {
                     Text(outcome.awardedPoints > 0 ? "+\(outcome.awardedPoints)" : "\(outcome.awardedPoints)")
                         .environment(\.layoutDirection, .leftToRight)
                 }.font(NajeebTheme.font(13, weight: "Medium"))
-                    .foregroundStyle(outcome.isCorrect ? NajeebTheme.teal : NajeebTheme.red)
-                    .padding(12).background((outcome.isCorrect ? NajeebTheme.mint : NajeebTheme.red).opacity(0.08), in: RoundedRectangle(cornerRadius: 12))
+                    .foregroundStyle(outcome.isCorrect ? Color.black : Color.red)
+                    .padding(12).background(NajeebTheme.surface, in: RoundedRectangle(cornerRadius: 12))
             }
         }
     }

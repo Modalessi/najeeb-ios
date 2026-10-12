@@ -29,3 +29,11 @@ The Xcode shared lockfile pins SDK dependencies. Package resolution may require 
 Game tests cover setup, eighteen-question progression, semantic-answer verdicts, scores, helpers, stale/duplicate requests, final results and legacy-state decoding. Voice-input tests cover activation variants, calls in the middle of an utterance, explicit submissions, expiration and turn isolation. API tests use mock transport for question filtering, helper validation and email/OTP/name/cookie contracts.
 
 No fresh full spoken game or CarPlay runtime session was performed for this source-folder change. Arabic recognition, overlapping speech and actual phone/Bluetooth routes need the [manual acceptance scenarios](VOICE_TEST_MATRIX.md). A passing CarPlay build does not establish simulator functionality or entitlement approval.
+
+## Original palette restored — 12 October 2026
+
+Restored the earlier cream canvas, neutral cards and badges, black navigation tint and black primary buttons with white labels. The current team's white card and black border identify its turn. Removed the multicolor accent helpers and gradient background; fonts, layout and gameplay are retained.
+
+The iPhone simulator build passed with the existing AppIntents metadata notice. Game/API/voice logic was not changed, so the 87-test suites were not rerun for this visual edit.
+
+A fresh, isolated iPhone 16e simulator showed the restored cream background, black heading/waveform/action button and neutral voice badge. No voice session or backend game was started for the visual check; the temporary device was removed afterward.

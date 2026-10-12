@@ -9,7 +9,7 @@ struct NajeebApp: App {
             HomeView()
                 .environmentObject(session)
                 .environment(\.layoutDirection, .rightToLeft)
-                .tint(NajeebTheme.teal)
+                .tint(.black)
                 .font(NajeebTheme.font(17))
                 .preferredColorScheme(.light)
         }

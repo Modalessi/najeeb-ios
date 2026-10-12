@@ -67,4 +67,4 @@ The **Najeeb-CarPlay** scheme uses `CPVoiceControlTemplate` and the same `GameSe
 - [How the app works, its flow and code](docs/APP_WALKTHROUGH.md)
 - [How ElevenLabs agents, settings and tools work](docs/ELEVENLABS_WALKTHROUGH.md)
 
-Short correct/incorrect cues are [Kenney CC0 interface sounds](https://kenney.nl/assets/interface-sounds); attribution and the original license are in [Voice/Sounds](Najeeb/Voice/Sounds/README.md). The UI uses Najeeb's frontend colors and bundled Thmanyah Sans fonts.
+Short correct/incorrect cues are [Kenney CC0 interface sounds](https://kenney.nl/assets/interface-sounds); attribution and the original license are in [Voice/Sounds](Najeeb/Voice/Sounds/README.md). The UI uses the original cream-and-black palette and bundled Thmanyah Sans fonts.
